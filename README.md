@@ -7,7 +7,7 @@ Data acquisition system based on microcontroller stm32F1(Blue pill)
 ## About
 In this project STM32 microcontroller is used to take multiple readings and show it to the user via inbuilt display and on the PC software. The data can also be recorded in excel file for further processing and visualization. It makes it very useful when some one want to record multiple readings and multiple times. Like this V-I characteristics of 3mm LEDs obtained with this system:
 
-
+---
 ### Features
  **1. Inputs:**
               </br> CH1 to CH4 : DC voltage upto ± 20v
@@ -34,7 +34,7 @@ In this project STM32 microcontroller is used to take multiple readings and show
   <div align="center">
   <img src="App.png" alt="Loading..." width="500" height="400">
   </div>
-- This GUI has most basic and useful features:
+
   * Serial connection interface
   * Trigger button (working same as the trigger button on the device).
   * Mode selection: There are two modes "Continuous", "Sweep". In the "continuous" mode continuously data is pushed into the excel file. In "Sweep" mode, one sweep is considered when analog out goes from -1.65v to +1.65v (internaly PWM goes from 0 to 240). And each sweep is recoreded in separate sheet of same file. In this mode, when recording is on and trigger is pressed, it will record N sweeps. Additionly there is an average button that can be used to take average of the corresponding values from all sheet and store in a separate sheet.
@@ -42,7 +42,7 @@ In this project STM32 microcontroller is used to take multiple readings and show
   * Reading display: Readings are displayed with default lables(CH1,CH2,...). These lables can be changed if requared. An UserParam is also given so that user can input values that needs to be included in the excel. 
   
 
-
+---
 ### Some data obtained with this setup 
 - **V-I characteristic of 3mm LEDs:** </br>
   <div align="center">
