@@ -9,7 +9,7 @@ In this project STM32 microcontroller is used to take multiple readings and show
 
 
 ### Features
-- **Inputs:**
+ **1. Inputs:**
               </br> CH1 to CH4 : DC voltage upto ± 20v
               </br> CH5 : DC voltage upto ± 40v
               </br> CH6 : DC voltage upto ± 100v
@@ -17,20 +17,20 @@ In this project STM32 microcontroller is used to take multiple readings and show
               </br> Speed : It takes pulse input to count number of pulses and speed
 
   
-- **Output:** </br>
+**2. Output:** </br>
               Analog out : Generates ramp voltage output ( -1.65v to +1.65v ) for scaning/sweeping purpose.
 
 
-- **Reading modes/Functions:** </br>
+**3. Reading modes/Functions:** </br>
      Function 1 : Sends one set of reading from all inputs to the PC when trigger button is pressed.</br>
      Function 2 : Start sending readings from all inputs continuously at predefined intervals(TimeBase) when trigger button is pressed.</br>
      Function 3 : When trigger is pressed it sends 240 readings at predefined intervals(TimeBase) while Analog out goes to +1.65v from -1.65v. 
 
-- **User buttons:** </br>
+**4. User buttons:** </br>
     Different settings can be changed using "Menu", "Up" and "Down" button. Settings like: which reading mode to be used, TimeBase selection, What to display on the inbuilt display, etc.
 
 
-- **PC GUI Software:**
+**5. PC GUI Software:**
   <div align="center">
   <img src="App.png" alt="Loading..." width="500" height="400">
   </div>
@@ -41,14 +41,14 @@ In this project STM32 microcontroller is used to take multiple readings and show
   * Analog out progrees bar: It gives a visual representation of the instantaneous output voltage.
   * Reading display: Readings are displayed with default lables(CH1,CH2,...). These lables can be changed if requared. An UserParam is also given so that user can input values that needs to be included in the excel. 
   
-- **Trigger Modes:** Manual (button on PA8) or periodic (timer/DMA).  
-- **4-Digit 7-Segment Display:** Live readings via multiplexed GPIO.  
-- **USB CDC Data Streaming:** Virtual COM port (PA11/PA12) outputs CSV.  
-- **PC GUI Software:** Python-based Tkinter app with Excel logging and real-time plotting.
 
-### Button Functions
-- **Trigger Button (PA8):** Initiates a single acquisition cycle and CSV transmit.  
-- **Reset Button (optional):** Clears onboard buffers and resets display.
+
+### Some data obtained with this setup 
+- **V-I characteristic of 3mm LEDs:** </br>
+  <div align="center">
+  <img src="V-I char_3mm_LED.png" alt="Loading..." width="800" height="400">
+  </div>
+
 
 ### PC Software Features
 - **COM Port Selector:** Auto-detects available serial ports.  
