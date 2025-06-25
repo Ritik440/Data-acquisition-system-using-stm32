@@ -5,10 +5,11 @@ Data acquisition system based on microcontroller stm32F1(Blue pill)
 ---
 
 ## About
-In this project STM32 microcontroller is used to take multiple readings and show it to the user via inbuilt display and on the PC software. The data can also be recorded in excel file for further processing and visualization.
+In this project STM32 microcontroller is used to take multiple readings and show it to the user via inbuilt display and on the PC software. The data can also be recorded in excel file for further processing and visualization. It makes it very useful when some one want to record multiple readings and multiple times.
+
 
 ### Features
-- **6 Analog Channels (PA0–PA5):** 12-bit ADC sampling up to several kHz per channel.  
+- **6 Analog Channels (PA0–PA5):** 12-bit ADC sampling up to 100 per channel.  
 - **Trigger Modes:** Manual (button on PA8) or periodic (timer/DMA).  
 - **4-Digit 7-Segment Display:** Live readings via multiplexed GPIO.  
 - **USB CDC Data Streaming:** Virtual COM port (PA11/PA12) outputs CSV.  
