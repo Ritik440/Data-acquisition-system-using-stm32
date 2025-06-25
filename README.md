@@ -9,8 +9,12 @@ In this project STM32 microcontroller is used to take multiple readings and show
 
 
 ### Features
-- **Inputs:** "/n"
-      12-bit ADC sampling up to 100 per channel.  
+- **Inputs:**
+              </br> CH1 to CH4 : DC voltage upto ± 20v
+              </br> CH5 : DC voltage upto ± 40v
+              </br> CH6 : DC voltage upto ± 100v
+              </br> Analog in : directly displays analog reding (0 to 4096) in range ± 1.65v
+              </br> Speed : It takes pulse input to count number of pulses and speed
 - **Trigger Modes:** Manual (button on PA8) or periodic (timer/DMA).  
 - **4-Digit 7-Segment Display:** Live readings via multiplexed GPIO.  
 - **USB CDC Data Streaming:** Virtual COM port (PA11/PA12) outputs CSV.  
