@@ -9,7 +9,8 @@ In this project STM32 microcontroller is used to take multiple readings and show
 
 
 ### Features
-- **6 Analog Channels (PA0–PA5):** 12-bit ADC sampling up to 100 per channel.  
+- **Input:**
+      12-bit ADC sampling up to 100 per channel.  
 - **Trigger Modes:** Manual (button on PA8) or periodic (timer/DMA).  
 - **4-Digit 7-Segment Display:** Live readings via multiplexed GPIO.  
 - **USB CDC Data Streaming:** Virtual COM port (PA11/PA12) outputs CSV.  
