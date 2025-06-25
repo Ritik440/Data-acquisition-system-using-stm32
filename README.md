@@ -26,7 +26,8 @@ In this project STM32 microcontroller is used to take multiple readings and show
      Function 2 : Start sending readings from all inputs continuously at predefined intervals(TimeBase) when trigger button is pressed.</br>
      Function 3 : When trigger is pressed it sends 240 readings at predefined intervals(TimeBase) while Analog out goes to +1.65v from -1.65v. 
 
-- **User buttons:**</br>
+- **User buttons:** </br>
+    Different settings can be changed using "Menu", "Up" and "Down" button. Settings like: which reading mode to be used, TimeBase selection, What to display on the inbuilt display.
 There are 
 - **Trigger Modes:** Manual (button on PA8) or periodic (timer/DMA).  
 - **4-Digit 7-Segment Display:** Live readings via multiplexed GPIO.  
