@@ -15,6 +15,19 @@ In this project STM32 microcontroller is used to take multiple readings and show
               </br> CH6 : DC voltage upto ± 100v
               </br> Analog in : directly displays analog reding (0 to 4096) in range ± 1.65v
               </br> Speed : It takes pulse input to count number of pulses and speed
+
+  
+- **Output:** </br>
+              Analog out : Generates ramp voltage output ( -1.65v to +1.65v ) for scaning/sweeping purpose.
+
+
+- **Reading modes/Functions:** </br>
+     Function 1 : Sends one set of reading from all inputs to the PC when trigger button is pressed.</br>
+     Function 2 : Start sending readings from all inputs continuously at predefined intervals(TimeBase) when trigger button is pressed.</br>
+     Function 3 : When trigger is pressed it sends 240 readings at predefined intervals(TimeBase) while Analog out goes to +1.65v from -1.65v. 
+
+- **User buttons:**</br>
+There are 
 - **Trigger Modes:** Manual (button on PA8) or periodic (timer/DMA).  
 - **4-Digit 7-Segment Display:** Live readings via multiplexed GPIO.  
 - **USB CDC Data Streaming:** Virtual COM port (PA11/PA12) outputs CSV.  
