@@ -38,7 +38,9 @@ In this project STM32 microcontroller is used to take multiple readings and show
   * Serial connection interface
   * Trigger button (working same as the trigger button on the device).
   * Mode selection: There are two modes "Continuous", "Sweep". In the "continuous" mode continuously data is pushed into the excel file. In "Sweep" mode, one sweep is considered when analog out goes from -1.65v to +1.65v (internaly PWM goes from 0 to 240). And each sweep is recoreded in separate sheet of same file. In this mode, when recording is on and trigger is pressed, it will record N sweeps. Additionly there is an average button that can be used to take average of the corresponding values from all sheet and store in a separate sheet.
-  -
+  * Analog out progrees bar: It gives a visual representation of the instantaneous output voltage.
+  * Reading display: Readings are displayed with default lables(CH1,CH2,...). These lables can be changed if requared. An UserParam is also given so that user can input values that needs to be included in the excel. 
+  
 - **Trigger Modes:** Manual (button on PA8) or periodic (timer/DMA).  
 - **4-Digit 7-Segment Display:** Live readings via multiplexed GPIO.  
 - **USB CDC Data Streaming:** Virtual COM port (PA11/PA12) outputs CSV.  
