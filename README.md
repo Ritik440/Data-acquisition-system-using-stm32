@@ -9,7 +9,7 @@ In this project STM32 microcontroller is used to take multiple readings and show
 
 
 ### Features
-- **Input:**
+- **Inputs:** "/n"
       12-bit ADC sampling up to 100 per channel.  
 - **Trigger Modes:** Manual (button on PA8) or periodic (timer/DMA).  
 - **4-Digit 7-Segment Display:** Live readings via multiplexed GPIO.  
