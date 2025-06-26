@@ -50,35 +50,15 @@ In this project STM32 microcontroller is used to take multiple readings and show
   </div>
 
 
-### PC Software Features
-- **COM Port Selector:** Auto-detects available serial ports.  
-- **Directory & Filename Input:** Choose folder and base filename for logs.  
-- **Excel Logging:** Writes data with default and user-defined headers via OpenPyXL.  
-- **Real-Time Plots:** Select one or more channels to view vs. timestamp.  
-- **Error Handling:** Detects and recovers from parse errors and serial disconnects.
-
-### How to Use It
-1. **Power & Connect:** Plug STM32 board via USB or battery, connect sensors.  
-2. **Launch GUI:** Open `daq_gui.py`, select COM port and log folder.  
-3. **Configure:** Enter headers, choose channels to plot.  
-4. **Start Acquisition:** Click **Start**—data appears on display, streams to PC.  
-5. **Stop & Review:** Click **Stop**, then open Excel file for analysis.
-
-### Use Cases
-- **Lab Experiments:** Multi-sensor recording for physics/chemistry demos.  
-- **Environmental Monitoring:** Temperature, light, humidity logging.  
-- **Educational Projects:** Teaching ADC, DMA, USB CDC, and GUI design.  
-- **Rapid Prototyping:** Quick DAQ system without expensive hardware.
-
 ---
 
 ## Construction
 
 ### 1. Hardware Details
-- **STM32F103C8T6 "Blue Pill":** 72 MHz Cortex-M3 MCU.  
-- **Analog Inputs:** PA0–PA5 wired to sensors (potentiometers, photodiodes).  
-- **Display Wiring:** Segment pins → PA6–PA12 (a–g + dp); digit selects → PB0–PB3.  
-- **Trigger Input:** PA8 with EXTI for button.  
+- **The microcontroller:** STM32F103C8T6 "Blue Pill" is used as MCU. It has 32bit processor with 64kB of FLASH and 20kB of SRAM having 12bit ADC.
+- **Analog Inputs:** PA0–PA5 wired to the external connector with appropriate voltage divider. 0.1uF capacitor is connected between each ADC pin and ground to suppress the loading of voltage divider by internal sampling capacitor.   
+- **Display Wiring:** Onboard 4 digit 7-segment display is controlled by port B using multiplexing. An additional red LED is used to indicate negative values on the display. This additional LED is connected in parallel with the inbuild decimal led of rightmost digit(which is painted with black from outside). The decimal led of rightmost digit is unused in most cases that`s whyt this done so that no any additional pin is used just to display negative values    
+- **Buttons:** Buttons are connected to the interrupt pins with pull down resistors. 0.1uF connected capacitor suppress the debouncing effect.  
 - **Power:** 5 V USB or Li-ion → onboard 3.3 V regulator.  
 - **Optional DMA:** ADC1 → memory buffer via DMA1_Channel1.
 
