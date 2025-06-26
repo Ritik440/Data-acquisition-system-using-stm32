@@ -15,7 +15,7 @@ uint16_t DigitSift[10] =         {      1,      10,     10,     10,     10,     
                                 //   time     20v     20v     20v     20v      40v     100v      analog   speed     count         // 4 means no decimal
 uint8_t MeasurementIndex = 0;
 
-uint8_t DecimalPlace = 4;       // from right  0 means no decimal
+uint8_t DecimalPlace = 4;       // from right  4 means no decimal
 int32_t value = 0;            // Number that will be displayed
 uint32_t n =0;                 // Stores numerical Value of float to segmented for 7 segment display
 uint32_t ccr = 1;
@@ -236,9 +236,8 @@ void Write_digit(int d) {
 
 void measure(){
       measurement[0] = millis()/1000;
-      measurement[1] = adc_read_value(PA_0, 12);       // 5v range   adcRaw = readADC(0)
-      measurement[1] = adc_read_value(PA_0, 12);
-      measurement[2] = adc_read_value(PA_1, 12);       // 5v range
+      measurement[1] = adc_read_value(PA_0, 12);       // 20v range  
+      measurement[2] = adc_read_value(PA_1, 12);       // 20v range
       measurement[3] = adc_read_value(PA_2, 12);       // 20v range
       measurement[4] = adc_read_value(PA_3, 12);       // 20v range 
       measurement[5] = adc_read_value(PA_4, 12);       // 40v range
@@ -247,7 +246,9 @@ void measure(){
 
                                                       
 
-      // All readings will be multiplied by 1000 including speed and count                                                
+      // All readings will be multiplied by 1000 including speed and count to avoid flating point arithmetic.
+      // for display purpose, digits are shifted by appropriate amount (DigitSift[]).
+      // for the PC the required calculation is done on the PC itself
       reading[0] = measurement[0];
       reading[1] = (89047*(measurement[1]-2037))/10000;     // 20v range CH1                      // Voltages will be recorded as mV
       reading[2] = (88653*(measurement[2]-2037))/10000;     // 20v range CH2
@@ -265,7 +266,7 @@ void measure(){
      
       reading[8] = 1000000/TimePeriod;                      // speed
       reading[9] = count;                                   // Counting
-      reading[10] = ccr;
+      reading[10] = ccr;                                    // Current value of PWM is also sent to the PC 
      
       
 
