@@ -65,7 +65,7 @@ In this project STM32 microcontroller is used to take multiple readings and show
 ### 2. [Firmware](https://github.com/Ritik440/Data-acquisition-system-using-stm32/blob/main/DAQ_V8_Serial.ino)
 
 
-### 3. PC Software Details
+### 3. [Python GUI](https://github.com/Ritik440/Data-acquisition-system-using-stm32/blob/main/DAQ.py)
 
 ---
 
