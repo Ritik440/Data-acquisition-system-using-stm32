@@ -1,20 +1,13 @@
 # Data-acquisition-system-using-stm32
-Data acquisition system based on microcontroller stm32F1(Blue pill) 
 **STM32 Multi-Channel Data Acquisition & Visualization System**
+<div align="center">
+  <img src="1.png" alt="Loading..." width="400" height="400">
+  </div>
 
----
 
 ## About
-<p align="left" style="display: flex; justify-content: space-between; align-items: center;">
-  <span>
-    To perform experiments and obtain results, you will need the following:
-    <br><br>
-    1. A power supply (a symmetrical supply is preferred)<br>
-    2. An external circuit...<br>
-    ...
-  </span>
-  <img src="https://github.com/your-username/your-repo-name/blob/main/image.png?raw=true" width="250" style="margin-left: 20px;">
-</p>
+
+
 
 In this project STM32 microcontroller is used to take multiple readings and show it to the user via inbuilt display and on the PC software. The data can also be recorded in excel file for further processing and visualization. It makes it very useful when some one want to record multiple readings and multiple times. Like this V-I characteristics of 3mm LEDs obtained with this system:
 
