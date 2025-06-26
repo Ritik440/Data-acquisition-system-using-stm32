@@ -2,6 +2,7 @@
 **STM32 Multi-Channel Data Acquisition & Visualization System**
 <div align="center">
   <img src="1.png" alt="Loading..." width="400" height="400">
+  <img src="App.png" alt="Loading..." width="500" height="400">
   </div>
 
 
@@ -9,7 +10,7 @@
 
 
 
-In this project STM32 microcontroller is used to take multiple readings and show it to the user via inbuilt display and on the PC software. The data can also be recorded in excel file for further processing and visualization. It makes it very useful when some one want to record multiple readings and multiple times. Like this V-I characteristics of 3mm LEDs obtained with this system:
+In this project STM32 microcontroller is used to take multiple readings and show it to the user via inbuilt display and on the PC software. The data can also be recorded in excel file for further processing and visualization. It makes it very useful when some one want to record multiple readings multiple times. 
 
 ---
 ### Features
