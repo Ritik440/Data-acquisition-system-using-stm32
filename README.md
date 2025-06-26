@@ -9,25 +9,25 @@ In this project STM32 microcontroller is used to take multiple readings and show
 
 ---
 ### Features
- **1. Inputs:**
-              </br> CH1 to CH4 : DC voltage upto ± 20v
-              </br> CH5 : DC voltage upto ± 40v
-              </br> CH6 : DC voltage upto ± 100v
-              </br> Analog in : directly displays analog reding (0 to 4096) in range ± 1.65v
-              </br> Speed : It takes pulse input to count number of pulses and speed
+ **1. Inputs:**</br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;CH1 to CH4 : DC voltage upto ± 20v</br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;CH5 : DC voltage upto ± 40v</br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;CH6 : DC voltage upto ± 100v</br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Analog in : directly displays analog reding (0 to 4096) in range ± 1.65v</br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Speed : It takes pulse input to count number of pulses and speed</br>
 
   
 **2. Output:** </br>
-              Analog out : Generates ramp voltage output ( -1.65v to +1.65v ) for scaning/sweeping purpose.
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Analog out : Generates ramp voltage output ( -1.65v to +1.65v ) for scaning/sweeping purpose.
 
 
 **3. Reading modes/Functions:** </br>
-     Function 1 : Sends one set of reading from all inputs to the PC when trigger button is pressed.</br>
-     Function 2 : Start sending readings from all inputs continuously at predefined intervals(TimeBase) when trigger button is pressed.</br>
-     Function 3 : When trigger is pressed it sends 240 readings at predefined intervals(TimeBase) while Analog out goes to +1.65v from -1.65v. 
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Function 1 : Sends one set of reading from all inputs to the PC when trigger button is pressed.</br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Function 2 : Start sending readings from all inputs continuously at predefined intervals(TimeBase) when trigger button is pressed.</br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Function 3 : When trigger is pressed it sends 240 readings at predefined intervals(TimeBase) while Analog out goes to +1.65v from -1.65v. 
 
 **4. User buttons:** </br>
-    Different settings can be changed using "Menu", "Up" and "Down" button. Settings like: which reading mode to be used, TimeBase selection, What to display on the inbuilt display, etc.
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Different settings can be changed using "Menu", "Up" and "Down" button. </br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Settings like: which reading mode to be used, TimeBase selection, What to display on the inbuilt display, etc.
 
 
 **5. PC GUI Software:**
