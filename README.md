@@ -59,8 +59,8 @@ In this project STM32 microcontroller is used to take multiple readings and show
 - **Analog Inputs:** PA0–PA5 wired to the external connector with appropriate voltage divider. 0.1uF capacitor is connected between each ADC pin and ground to suppress the loading of voltage divider by internal sampling capacitor.   
 - **Display Wiring:** Onboard 4 digit 7-segment display is controlled by port B using multiplexing. An additional red LED is used to indicate negative values on the display. This additional LED is connected in parallel with the inbuild decimal led of rightmost digit(which is painted with black from outside). The decimal led of rightmost digit is unused in most cases that`s whyt this done so that no any additional pin is used just to display negative values    
 - **Buttons:** Buttons are connected to the interrupt pins with pull down resistors. 0.1uF connected capacitor suppress the debouncing effect.  
-- **Power:** 5 V USB or Li-ion → onboard 3.3 V regulator.  
-- **Optional DMA:** ADC1 → memory buffer via DMA1_Channel1.
+- **Referance voltage** As MCU can read from 0v to 3.3v, to read negative voltages a reference of 1.65v is generated with the help of voltage divider between 0v rail and 3.3v rail and a buffer using LM324.    
+- **Analog Output** Digital pin PA7 is configured to generate PWM pulses which is then passed to a low pass filter, generating voltage voltage between 0v and 3.3v ( -1.65 to +1.65 with respect to Vref). 
 
 ### 2. Firmware Details
 - **IDE & Toolchain:** STM32CubeIDE with HAL libraries.  
