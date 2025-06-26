@@ -1,8 +1,8 @@
 # Data-acquisition-system-using-stm32
 **STM32 Multi-Channel Data Acquisition & Visualization System**
 <div align="center">
-  <img src="1.png" alt="Loading..." width="400" height="400">
-  <img src="App.png" alt="Loading..." width="500" height="400">
+  <img src="1.png" alt="Loading..." width="200" height="200">
+  <img src="App.png" alt="Loading..." width="250" height="200">
   </div>
 
 
