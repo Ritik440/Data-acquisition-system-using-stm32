@@ -5,6 +5,17 @@ Data acquisition system based on microcontroller stm32F1(Blue pill)
 ---
 
 ## About
+<p align="left" style="display: flex; justify-content: space-between; align-items: center;">
+  <span>
+    To perform experiments and obtain results, you will need the following:
+    <br><br>
+    1. A power supply (a symmetrical supply is preferred)<br>
+    2. An external circuit...<br>
+    ...
+  </span>
+  <img src="https://github.com/your-username/your-repo-name/blob/main/image.png?raw=true" width="250" style="margin-left: 20px;">
+</p>
+
 In this project STM32 microcontroller is used to take multiple readings and show it to the user via inbuilt display and on the PC software. The data can also be recorded in excel file for further processing and visualization. It makes it very useful when some one want to record multiple readings and multiple times. Like this V-I characteristics of 3mm LEDs obtained with this system:
 
 ---
@@ -66,14 +77,3 @@ In this project STM32 microcontroller is used to take multiple readings and show
 
 
 ### 3. [Python GUI](https://github.com/Ritik440/Data-acquisition-system-using-stm32/blob/main/DAQ.py)
-
----
-
-## Conclusion
-
-This system delivers a cost-effective, customizable data acquisition platform combining:
-- **Real-time on-board display** for immediate feedback.  
-- **High-speed USB streaming** for extensive logging.  
-- **User-friendly PC application** for analysis and visualization.  
-
-Ideal for educators, hobbyists, and prototype developers seeking a flexible DAQ solution without commercial hardware costs.
