@@ -44,7 +44,7 @@ In this project STM32 microcontroller is used to take multiple readings and show
 
 ---
 ### Some data obtained with this setup 
-- **V-I characteristic of 3mm LEDs:** </br>
+- **V-I characteristic of 3mm LEDs:** [steps](https://github.com/Ritik440/Data-acquisition-system-using-stm32/blob/main/exp1.txt)</br>
   <div align="center">
   <img src="V-I char_3mm_LED.png" alt="Loading..." width="800" height="400">
   </div>
