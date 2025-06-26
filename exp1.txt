@@ -1,1 +1,24 @@
-To do dome obtain some re
+To do some experiment and obtain some result you will need the following:-
+
+        1. A power supply (A symmetrical supply is preferred)
+        2. An external circuit that can act as a voltage-dependent voltage source to use Analog out (–1.65 V to +1.65 V) of MCU to generate higher voltage (say –10 V to +10 V) to sweep voltage                  between these values.
+        3. Use the Vref of the device as ground for external circuit.
+        4. Connect the voltages to be measured to the input channels of the device.
+
+
+On the device:-
+    - Choose F3 in the menu
+    - Choose appropriate TimeBase (100 ms or 50 ms)
+    - Connect the USB to PC
+
+On the PC software
+    - Choose the COM port and baud rate (115200) and connect
+    - Choose folder to save the file, choose "Sweep" mode, choose N as 10, so that 10 sheets will be averaged to remove external unwanted noise.
+    - Press Record then Trigger, the device will start sweeping 10 times.
+    - After sweeping is done press Stop, the file will be saved.
+    - Press "Average" and select the file, an averaged sheet will be created by taking the average of all 10 sheets.
+
+Open the file created
+  - To calculate the current through the LED:-
+        current = (voltage across the series resistor) / (value of the resistor)
+  - Current is plotted against LED voltage
