@@ -62,21 +62,10 @@ In this project STM32 microcontroller is used to take multiple readings and show
 - **Referance voltage** As MCU can read from 0v to 3.3v, to read negative voltages a reference of 1.65v is generated with the help of voltage divider between 0v rail and 3.3v rail and a buffer using LM324.    
 - **Analog Output** Digital pin PA7 is configured to generate PWM pulses which is then passed to a low pass filter, generating voltage voltage between 0v and 3.3v ( -1.65 to +1.65 with respect to Vref). 
 
-### 2. Firmware Details
-- **IDE & Toolchain:** STM32CubeIDE with HAL libraries.  
-- **Clock Setup:** HSE 8 MHz → SYSCLK 72 MHz.  
-- **GPIO:** Configure analog (PA0–PA5), outputs (segments, digits), input with EXTI (PA8).  
-- **ADC:** Scan mode over 6 channels, continuous DMA circular buffer.  
-- **Timer (TIM2):** Generates sampling triggers at user-defined rate.  
-- **USB CDC:** Middleware to enumerate as COM port, send `time_ms,ch1…ch6` CSV.  
-- **Display Multiplexing:** 1 ms per digit refresh for flicker-free output.
+### 2. [Firmware](https://github.com/Ritik440/Data-acquisition-system-using-stm32/blob/main/DAQ_V8_Serial.ino)
+
 
 ### 3. PC Software Details
-- **Language & Libraries:** Python 3.10+, `tkinter`, `pyserial`, `openpyxl`, `matplotlib`.  
-- **GUI Layout:** Dropdowns for COM and folder, text entries for headers, checkboxes for channels, **Start/Stop** buttons, and plot area.  
-- **Data Handling:** Reads incoming lines, splits on commas, converts to floats/ints, appends to workbook and plot buffer.  
-- **Logging:** Creates timestamped Excel `.xlsx` with headers in first rows, writes each sample as new row.  
-- **Plotting Loop:** Updates plots every N samples without blocking UI (via `after()` callback).
 
 ---
 
